@@ -1,0 +1,32 @@
+.header {
+    background-color: #222222;
+    padding-left: 50px;
+    padding-top: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    color: #888888;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 .photo {
+    font-weight: lighter;
+}
+
+.header h1 .search {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1rem;
+    margin-left: 20px;
+}

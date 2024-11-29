@@ -1,3 +1,4 @@
+import './GallerySearch.css'
 import PhotoCard from "../PhotoCard/PhotoCard"
 import SearchBar from "../SearchBar/SearchBar"
 import Title from "../Title/Title"
@@ -19,7 +20,7 @@ export default function GallerySearch({tag}) {
         },
     ]
     return (
-        <>
+        <div className="gallerySearch">
             <SearchBar tag={tag}/>
             {
                 tag ? <Title>Results</Title> : <Title>Trending Photos Right Now</Title>
@@ -27,6 +28,6 @@ export default function GallerySearch({tag}) {
             {photosData.map((photo) => {
                 return <PhotoCard photo={photo} />
             })}
-        </>
+        </div>
     )
 }
