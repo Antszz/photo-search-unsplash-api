@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./front-photo-search
+    ports:
+      - "3000:3000"
+  backend:
+    build: ./back-photo-search
+    ports:
+      - "5000:5000"
