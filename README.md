@@ -19,8 +19,10 @@ This web application allows you to search for photos using the Unsplash API. It 
 ### How to start the project:
 
 1.  **Set up the Unsplash API Key:**
-    * Create a `.env` file in the `back-photo-search` folder.
-    * Add your Unsplash API key to the file:
+
+    *   For your convenience, a `.env` file with a placeholder API key is already included in the `back-photo-search` folder. This allows you to test the application immediately.
+    *   However, please be aware that in a real-world project, you should **never** include your API keys directly in the repository. Instead, you should create your own `.env` file and store it securely.
+    *   If you have your own Unsplash API key, replace the placeholder key in the `.env` file with your actual key:
 
     ```bash
     UNSPLASH_ACCESS_KEY=your_unsplash_access_key
