@@ -1,5 +1,5 @@
-import GallerySearch from "../GallerySearch/GallerySearch";
-import Header from "../Header/Header";
+import GallerySearch from "./GallerySearch";
+import Header from "./Header";
 
 
 export default function Home() {

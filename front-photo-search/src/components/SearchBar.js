@@ -1,4 +1,4 @@
-import Title from "../Title/Title"
+import Title from "./UtilComponents"
 
 
 export default function SearchBar({tag}) {
