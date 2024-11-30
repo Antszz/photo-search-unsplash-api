@@ -1,7 +1,7 @@
 from marshmallow import Schema
 from marshmallow import fields
 
-from services.unsplash import get_tags_by_photo_id
+from services.unsplash_service import get_tags_by_photo_id
 
 
 class PhotoSchema(Schema):
