@@ -39,9 +39,15 @@ export default function GallerySearch() {
                 {isLoading ? (
                     <p>Cargando fotos...</p>
                 ) : (
-                    photosData.map((photo_data) => (
-                        <PhotoCard key={photo_data.id} photo_data={photo_data} />
-                    ))
+                    <>
+                        {photosData.length > 0 ? (
+                            photosData.map((photo_data) => (
+                                <PhotoCard key={photo_data.id} photo_data={photo_data} />
+                            ))
+                        ) : (
+                            <p>There are no photos to show. We've probably reached the API's limit of 50 requests per hour</p>
+                        )}
+                    </>
                 )}
             </div>
         </div>
