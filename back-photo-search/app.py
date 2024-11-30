@@ -5,11 +5,11 @@ from flask_cors import CORS
 from api.routes import api
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 
 def setup(app: Flask):
     load_dotenv()
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
     app.register_blueprint(api, url_prefix='/api')
 
 
