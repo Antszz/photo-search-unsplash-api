@@ -1,6 +1,6 @@
 import PhotoCard from "./PhotoCard"
 import SearchBar from "./SearchBar"
-import Title from "./UtilComponents"
+import { Title } from "./UtilComponents"
 
 
 export default function GallerySearch({ tag }) {

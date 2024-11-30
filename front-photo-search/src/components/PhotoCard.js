@@ -1,3 +1,6 @@
+import { Button } from "./UtilComponents"
+
+
 function ImageFooter({ author = "Edu", take_date = "24 de abril", tags = ["bird", "lake", "water"] }) {
     return (
         <div className="flex justify-between p-2 items-center">
@@ -5,9 +8,9 @@ function ImageFooter({ author = "Edu", take_date = "24 de abril", tags = ["bird"
                 <p>by <b>{author}</b></p>
                 <p>Take date: {take_date}</p>
             </div>
-            <div className="flex">
+            <div className="flex gap-3">
                 {tags.map((tag) => {
-                    return <button className="border-white border-2 rounded-md px-2 py-1 mx-1.5">{tag}</button>
+                    return <Button variant="secondary">{tag}</Button>
                 })}
             </div>
         </div>
