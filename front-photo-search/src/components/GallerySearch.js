@@ -1,9 +1,11 @@
+import { useParams } from 'react-router-dom';
 import PhotoCard from "./PhotoCard"
 import SearchBar from "./SearchBar"
 import { Title } from "./UtilComponents"
 
 
-export default function GallerySearch({ tag }) {
+export default function GallerySearch() {
+    const { tag } = useParams();
     const photosData = [
         {
             "id": "LBI7cgq3pbM",

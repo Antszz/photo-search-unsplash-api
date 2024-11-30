@@ -1,7 +1,16 @@
+import { useNavigate, useParams } from 'react-router-dom';
 import { Button } from "./UtilComponents"
 
 
 function ImageFooter({ author = "Edu", take_date = "24 de abril", tags = ["bird", "lake", "water"] }) {
+    const navigate = useNavigate();
+    const { tag: param_tag } = useParams();
+
+    const handleClick = (tag) => {
+        if (param_tag === tag) return;
+        navigate(`/tag/${tag}`);
+    };
+
     return (
         <div className="flex justify-between p-2 items-center">
             <div className="hidden sm:block flex flex-col">
@@ -9,9 +18,15 @@ function ImageFooter({ author = "Edu", take_date = "24 de abril", tags = ["bird"
                 <p>Take date: {take_date}</p>
             </div>
             <div className="flex gap-3">
-                {tags.map((tag) => {
-                    return <Button variant="secondary">{tag}</Button>
-                })}
+                {tags.map((tag) => (
+                    <Button
+                        key={tag}
+                        variant="secondary"
+                        onClick={() => handleClick(tag)}
+                    >
+                        {tag}
+                    </Button>
+                ))}
             </div>
         </div>
     )
