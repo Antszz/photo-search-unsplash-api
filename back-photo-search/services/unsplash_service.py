@@ -8,7 +8,7 @@ from singleton.unsplash_session import UnsplashSession
 logger = logging.getLogger(__name__)
 
 
-def get_random_photos_from_unsplash(num_photos: int = MAX_THREADS) -> dict:
+def get_random_photos_from_unsplash(num_photos: int = MAX_THREADS) -> List[dict]:
     # See https://unsplash.com/documentation#get-a-random-photo
     url = f'{UNSPLASH_API_URL}/photos/random'
     params = {'count': num_photos}
@@ -16,7 +16,7 @@ def get_random_photos_from_unsplash(num_photos: int = MAX_THREADS) -> dict:
     response = session.get(url, params=params)
     if response.status_code != 200:
         logger.error(f'Failed to get random photos from Unsplash: {response.status_code} {response.text}')
-        return {}
+        return []
     return response.json()
 
 
