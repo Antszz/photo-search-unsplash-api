@@ -1,13 +1,15 @@
+from dotenv import load_dotenv
 from flask import Flask
 from flask import jsonify
-from dotenv import load_dotenv
-from serializers.photo import PhotoSchema
+from flask_cors import CORS
 
-from services.unsplash import get_random_photos_from_unsplash
+from serializers.photo import PhotoSchema
 from services.unsplash import get_photos_by_query
+from services.unsplash import get_random_photos_from_unsplash
 
 load_dotenv()
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/api/get-random-photos')
@@ -33,4 +35,4 @@ def search_photos(query):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
