@@ -8,6 +8,8 @@ This web application allows you to search for photos using the Unsplash API. It 
 *   **Photo display:**  Displays the photos found with their author, creation date, and tags.
 *   **Tag navigation:**  Click on photo tags to perform new searches.
 *   **Responsive design:**  The application adapts to different screen sizes.
+*   **Hot Reload:**  Both frontend and backend are configured for hot reload, enabling faster development by automatically updating the application when code changes are made.
+*   **Seamless Navigation:** The browser's back button is fully functional, allowing users to navigate through search results and pages as expected.
 
 ### Optimizations:
 
