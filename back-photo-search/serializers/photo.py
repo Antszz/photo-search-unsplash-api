@@ -1,4 +1,5 @@
-from marshmallow import Schema, fields
+from marshmallow import Schema
+from marshmallow import fields
 
 from services.unsplash import get_tags_by_photo_id
 

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PhotoCard from "./PhotoCard";
-import SearchBar from "./SearchBar";
-import { Title } from "./UtilComponents";
-import { fetchPhotosQuery, fetchRandomPhotos } from "../services/photoServices";
+
+import { fetchPhotosQuery, fetchRandomPhotos } from '../services/photoServices';
+
+import PhotoCard from './PhotoCard';
+import SearchBar from './SearchBar';
+import { Title } from './UtilComponents';
 
 
 export default function GallerySearch() {
