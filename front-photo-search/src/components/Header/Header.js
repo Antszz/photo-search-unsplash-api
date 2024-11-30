@@ -1,12 +1,11 @@
-import './Header.css';
-
 export default function Header() {
     return (
-        <header className="header">
-            <h1>
-                <span className="photo">PHOTO</span><span className="search">SEARCH</span>
+        <header className="w-full px-[5%] bg-[#222222] text-[#888888] flex flex-row items-center justify-left gap-5">
+            <h1 className="pt-3 pb-1 text-2xl md:text-3xl m-0">
+                <span className="photo">PHOTO</span>
+                <span className="search font-extrabold text-white">SEARCH</span>
             </h1>
-            <p>powered by Flickr</p>
+            <span className="text-xs md:text-md pt-2">powered by Flickr</span>
         </header>
     );
 }

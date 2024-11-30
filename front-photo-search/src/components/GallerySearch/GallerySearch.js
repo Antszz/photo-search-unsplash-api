@@ -1,10 +1,9 @@
-import './GallerySearch.css'
 import PhotoCard from "../PhotoCard/PhotoCard"
 import SearchBar from "../SearchBar/SearchBar"
 import Title from "../Title/Title"
 
 
-export default function GallerySearch({tag}) {
+export default function GallerySearch({ tag }) {
     const photosData = [
         {
             "id": "LBI7cgq3pbM",
@@ -20,14 +19,16 @@ export default function GallerySearch({tag}) {
         },
     ]
     return (
-        <div className="gallerySearch">
-            <SearchBar tag={tag}/>
-            {
-                tag ? <Title>Results</Title> : <Title>Trending Photos Right Now</Title>
-            }
-            {photosData.map((photo) => {
-                return <PhotoCard photo={photo} />
-            })}
+        <div className="px-[5%] pt-3">
+            <SearchBar tag={tag} />
+            <div className="flex flex-col gap-5">
+                {
+                    tag ? <Title>Results</Title> : <Title>Trending Photos Right Now</Title>
+                }
+                {photosData.map((photo) => {
+                    return <PhotoCard photo={photo} />
+                })}
+            </div>
         </div>
     )
 }
