@@ -8,6 +8,26 @@ import SearchBar from './SearchBar';
 import { Title } from './UtilComponents';
 
 
+function PhotoList({ photos }) {
+    if (photos.length === 0) {
+        return (
+            <p>
+                There are no photos to show. We've probably reached the API's limit of 50
+                requests per hour
+            </p>
+        );
+    }
+
+    return (
+        <div className='flex flex-col gap-5'>
+            {photos.map((photo_data) => (
+                <PhotoCard key={photo_data.id} photo_data={photo_data} />
+            ))}
+        </div>
+    );
+}
+
+
 export default function GallerySearch() {
     const { tag } = useParams();
     const [photosData, setPhotosData] = useState([]);
@@ -39,15 +59,7 @@ export default function GallerySearch() {
                 {isLoading ? (
                     <p>Cargando fotos...</p>
                 ) : (
-                    <>
-                        {photosData.length > 0 ? (
-                            photosData.map((photo_data) => (
-                                <PhotoCard key={photo_data.id} photo_data={photo_data} />
-                            ))
-                        ) : (
-                            <p>There are no photos to show. We've probably reached the API's limit of 50 requests per hour</p>
-                        )}
-                    </>
+                    <PhotoList photos={photosData} />
                 )}
             </div>
         </div>
